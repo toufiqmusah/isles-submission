@@ -17,7 +17,11 @@ RUN python -m pip install \
 
 # Install nnU-Net from bundled source (includes custom ISLES trainers)
 COPY --chown=user:user nnUNet /opt/app/nnUNet
-RUN python -m pip install --no-cache-dir --no-color --break-system-packages /opt/app/nnUNet
+RUN python -m pip install \
+    --no-cache-dir \
+    --no-color \
+    --break-system-packages \
+    /opt/app/nnUNet
 
 # Copy application code
 COPY --chown=user:user app.py /opt/app/

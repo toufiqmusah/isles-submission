@@ -1,0 +1,3 @@
+# Application dependencies (nnUNet deps are installed via its pyproject.toml)
+fastapi
+uvicorn

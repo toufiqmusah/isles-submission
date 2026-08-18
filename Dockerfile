@@ -21,7 +21,12 @@ RUN python -m pip install \
     --no-cache-dir \
     --no-color \
     --break-system-packages \
-    /opt/app/nnUNet
+    /opt/app/nnUNet && \
+    python -m pip install \
+    --no-cache-dir \
+    --no-color \
+    --break-system-packages \
+    -e /opt/app/nnUNet/external/MedNeXt
 
 # Copy application code
 COPY --chown=user:user app.py /opt/app/

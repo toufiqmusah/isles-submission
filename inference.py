@@ -224,7 +224,7 @@ def write_array_as_image_file(*, location, array, reference_image=None):
 
     SimpleITK.WriteImage(
         image,
-        location / "output.nii.gz",
+        location / "output.mha",
         useCompression=True,
     )
 

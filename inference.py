@@ -80,9 +80,9 @@ def init_model():
     for cfg in MODEL_CONFIGS:
         print(f"\nLoading model: {cfg['name']} from {cfg['dir']}")
         p = nnUNetPredictor(
-            tile_step_size=0.5,
+            tile_step_size=0.9,
             use_gaussian=True,
-            use_mirroring=True,
+            use_mirroring=False,
             perform_everything_on_device=True,
             device=device,
         )
